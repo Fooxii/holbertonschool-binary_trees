@@ -1,1 +1,1 @@
-# holbertonschool-binary_trees
+README file of the repository holbertonschool-binary-trees
