@@ -14,7 +14,7 @@ if (!tree)
 return;
 }
 
-binary_tree_delete(temp->left);
+binary_tree_delete(tree->left);
 binary_tree_delete(tree->right);
 free(tree);
 }
