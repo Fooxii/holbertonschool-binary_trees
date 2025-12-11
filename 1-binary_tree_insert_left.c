@@ -2,7 +2,8 @@
 #include <stdlib.h>
 
 /**
- * binary_tree_insert_left - function that inserts a node as the left-child of another node
+ * binary_tree_insert_left - function that inserts a node as
+ * the left-child of another node
  * @parent: pointer to the node to insert the left-child in
  * @value: is the value being stored in the new node
  * Return: pointer to the created node, NULL on failure or if parent is NULL
@@ -25,18 +26,18 @@ return ((void *)0);
 }
 
 cpvalue = value;
-if (parent->left != (void *)0)
+leftchild->n = value;
+leftchild->parent = parent;
+leftchild->left = NULL;
+leftchild->right = NULL;
+
+if (parent->left != NULL)
 {
 leftchild->left = parent->left;
-parent->left = leftchild;
+parent->left->parent = leftchild;
 }
-else
-{
+
 parent->left = leftchild;
-leftchild->left = (void *)0;
-}
-leftchild->n = cpvalue;
-leftchild->right = (void *)0;
 
 return (leftchild);
 }
