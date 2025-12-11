@@ -16,4 +16,6 @@ return (0);
 
 depth = binary_tree_depth(tree->parent);
 depth++;
+
+return (depth);
 }
