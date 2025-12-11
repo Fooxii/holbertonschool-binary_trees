@@ -24,6 +24,7 @@ if (!leftchild)
 return ((void *)0);
 }
 
+cpvalue = value;
 if (parent->left != (void *)0)
 {
 leftchild->left = parent->left;
