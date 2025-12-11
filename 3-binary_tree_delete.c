@@ -14,14 +14,8 @@ if (!tree)
 {
 return;
 }
-temp = malloc(sizeof(binary_tree_t));
-if (!temp)
-{
-return;
-}
-temp = tree;
+
 binary_tree_delete(temp->left);
-binary_tree_delete(temp->right);
-free(temp);
+binary_tree_delete(tree->right);
 free(tree);
 }
