@@ -23,16 +23,19 @@ if (!leftchild)
 {
 return ((void *)0);
 }
-cpvalue = value;
+
 if (parent->left != (void *)0)
 {
 leftchild->left = parent->left;
-parent->left->parent = leftchild;
-}
 parent->left = leftchild;
-leftchild->parent = parent;
-leftchild->n = cpvalue;
+}
+else
+{
+parent->left = leftchild;
 leftchild->left = (void *)0;
+}
+leftchild->n = cpvalue;
 leftchild->right = (void *)0;
+
 return (leftchild);
 }
