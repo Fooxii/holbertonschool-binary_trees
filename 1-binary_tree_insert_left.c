@@ -19,11 +19,16 @@ return ((void *)0);
 }
 
 leftchild = malloc(sizeof(binary_tree_t));
-if (leftchild)
+if (!leftchild)
 {
 return ((void *)0);
 }
 cpvalue = value;
+if (parent->left != (void *)0)
+{
+leftchild->left = parent->left;
+parent->left->parent = leftchild;
+}
 parent->left = leftchild;
 leftchild->parent = parent;
 leftchild->n = cpvalue;
