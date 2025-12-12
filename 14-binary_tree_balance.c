@@ -15,15 +15,15 @@ return (0);
 
 if (tree->left)
 {
-lh_left = tree->left->left ? 1 + binary_tree_balance(tree->left->left) : 1;
-lh_right = tree->left->right ? 1 + binary_tree_balance(tree->left->right) : 1;
+lh_left = tree->left->left ? 1 + binary_tree_height(tree->left->left) : 1;
+lh_right = tree->left->right ? 1 + binary_tree_height(tree->left->right) : 1;
 left_h = (lh_left > lh_right ? lh_left : lh_right);
 }
 
 if (tree->right)
 {
-rh_left = tree->right->left ? 1 + binary_tree_balance(tree->right->left) : 1;
-rh_right = tree->right->right ? 1 + binary_tree_balance(tree->right->right) : 1;
+rh_left = tree->right->left ? 1 + binary_tree_height(tree->right->left) : 1;
+rh_right = tree->right->right ? 1 + binary_tree_height(tree->right->right) : 1;
 right_h = (rh_left > rh_right ? rh_left : rh_right);
 }
 
