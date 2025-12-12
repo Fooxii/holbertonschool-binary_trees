@@ -6,15 +6,15 @@
  * Return: height of the tree, 0 if tree is NULL or a leaf
  */
 
-int binary_tree_height(const binary_tree_t *tree)
+int binary_tree_height_v2(const binary_tree_t *tree)
 {
 int left_h, right_h;
 
 if (!tree || (!tree->left && !tree->right))
 return (-1);
 
-left_h = binary_tree_height(tree->left);
-right_h = binary_tree_height(tree->right);
+left_h = binary_tree_height_v2(tree->left);
+right_h = binary_tree_height_v2(tree->right);
 
 if (left_h > right_h)
 {
@@ -38,8 +38,8 @@ int left_h, right_h;
 if (!tree)
 return (0);
 
-left_h = binary_tree_height(tree->left);
-right_h = binary_tree_height(tree->right);
+left_h = binary_tree_height_v2(tree->left);
+right_h = binary_tree_height_v2(tree->right);
 
 return (left_h - right_h);
 }
