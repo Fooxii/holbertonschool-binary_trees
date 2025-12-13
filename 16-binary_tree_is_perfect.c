@@ -73,7 +73,7 @@ if (!tree)
 {
 return (0);
 }
-if (!binary_tree_is_full2(tree))
+if (binary_tree_is_full2(tree) != 1)
 {
 return (0);
 }
