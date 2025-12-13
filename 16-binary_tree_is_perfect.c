@@ -77,7 +77,7 @@ if (!binary_tree_is_full2(tree))
 {
 return (0);
 }
-if (!binary_tree_balance2(tree) == 0)
+if (binary_tree_balance2(tree) != 0)
 {
 return (0);
 }
