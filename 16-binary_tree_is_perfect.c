@@ -1,7 +1,8 @@
 #include "binary_trees.h"
 
 /**
- * check_leaf_levels - helper function to check if all leaf nodes are at the same level
+ * check_leaf_levels - helper function to check if all
+ * leaf nodes are at the same level
  * @tree: pointer to the root node of the tree
  * @level: current level in the tree
  * @height: height of the tree
@@ -10,18 +11,18 @@
 
 int check_leaf_levels(const binary_tree_t *tree, int level, int height)
 {
-    if (!tree)
-        return (1);
+if (!tree)
+return (1);
 
-    if (!tree->left && !tree->right)
-        return (level == height);
+if (!tree->left && !tree->right)
+return (level == height);
 
-    return (check_leaf_levels(tree->left, level + 1, height) &&
-            check_leaf_levels(tree->right, level + 1, height));
+return (check_leaf_levels(tree->left, level + 1, height) &&
+check_leaf_levels(tree->right, level + 1, height));
 }
 
 /**
- * binary_tree_height - function that measures the height of a binary tree
+ * binary_tree_height2 - function that measures the height of a binary tree
  * @tree: pointer to the root node of the tree to measure the height
  * Return: height of binary tree
  */
@@ -73,7 +74,7 @@ return (0);
 }
 
 /**
- * binary_trees_is_perfect - function that checks if a binary tree is perfect
+ * binary_tree_is_perfect - function that checks if a binary tree is perfect
  * @tree: pointer to the root node of the tree
  * Return: 1 if perfect, 0 if NULL or not perfect
  */
